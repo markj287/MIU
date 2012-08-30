@@ -4,7 +4,7 @@
 	padding: 0;
 }  /* universal reset */
 
-#content {
+.content {
 	margin: 0 auto;
 	width: 320px;
 	height: 480px;
@@ -39,10 +39,12 @@
   	background: -o-linear-gradient(top, #7c7c7d, #423E3C); /* Opera 11.10+ */
 }
 
-header {
+.appTitle {
 	background-color: #423E3C;
 }
 
+
+/*form styles*/
 label {
 	display: block;
 }
