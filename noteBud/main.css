@@ -4,43 +4,84 @@
 	padding: 0;
 }  /* universal reset */
 
+.featured {
+	width: 300px;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #2B5599;
+}
+
 .content {
 	margin: 0 auto;
 	width: 320px;
 	height: 480px;
 	overflow: auto;
-	background: #EB540A;  /*fall back option */
-  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#377AC4), to(#1a82f7)); /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-linear-gradient(top, #1a82f7, #377AC4);  /*Safari 5.1, Chrome 10+ */  
-  	background: -moz-linear-gradient(top, #1a82f7, #377AC4); /* Firefox 3.6+ */
-  	background: -ms-linear-gradient(top, #1a82f7, #377AC4); /* IE 10 */
-  	background: -o-linear-gradient(top, #1a82f7, #377AC4); /* Opera 11.10+ */
+	background: #d3d3d3; 
+	border: 1px solid black;
+  	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#377AC4), to(#1a82f7)); /* Safari 4-5, Chrome 1-9 
+    background: -webkit-linear-gradient(top, #1a82f7, #377AC4);   
+  	background: -moz-linear-gradient(top, #1a82f7, #377AC4); 
+  	background: -ms-linear-gradient(top, #1a82f7, #377AC4); 
+  	background: -o-linear-gradient(top, #1a82f7, #377AC4); 
 	font-family: Arial, "MS Trebuchet", sans-serif;
 	color: #fff;
+	*/
 }
 
 #addNote {
 	display: none;
 }
 
-.buttons {
-	width: 260px;
-	height :45px;
-	margin: 20px 10px 0 30px;
+.newNoteBtn {
+	width: 100%;
+	height :60px;
 	border: none;
 	color: #fff;
-	font-size: larger;
+	font-size: medium;
 	background: #EB540A;  /*fall back option */
-	-webkit-border-radius: 7px;
-  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#423E3C), to(#7c7c7d)); /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-linear-gradient(top, #7c7c7d, #423E3C);  /*Safari 5.1, Chrome 10+ */  
-  	background: -moz-linear-gradient(top, #7c7c7d, #423E3C); /* Firefox 3.6+ */
-  	background: -ms-linear-gradient(top, #7c7c7d, #423E3C); /* IE 10 */
-  	background: -o-linear-gradient(top, #7c7c7d, #423E3C); /* Opera 11.10+ */
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2d2d2d), to(#333333)); /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-linear-gradient(top, #2d2d2d, #333333);  /*Safari 5.1, Chrome 10+ */  
+  	background: -moz-linear-gradient(top, #2d2d2d, #333333); /* Firefox 3.6+ */
+  	background: -ms-linear-gradient(top, #2d2d2d, #333333); /* IE 10 */
+  	background: -o-linear-gradient(top, #2d2d2d, #333333); /* Opera 11.10+ */
+}
+
+.myNotesBtn {
+	width: 100%;
+	height :60px;
+	border: none;
+	color: #fff;
+	font-size: medium;
+	background: #EB540A;  /*fall back option */
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#423E3C), to(#ea6d2f)); /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-linear-gradient(top, #F07830, #ea6d2f);  /*Safari 5.1, Chrome 10+ */  
+  	background: -moz-linear-gradient(top, #F07830, #ea6d2f); /* Firefox 3.6+ */
+  	background: -ms-linear-gradient(top, #F07830, #ea6d2f); /* IE 10 */
+  	background: -o-linear-gradient(top, #F07830, #ea6d2f); /* Opera 11.10+ */
+}
+
+.newBookBtn {
+	width: 100%;
+	height :60px;
+	border: none;
+	color: #fff;
+	font-size: medium;
+	background: #EB540A;  /*fall back option */
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AAAAAA), to(#919191)); /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-linear-gradient(top, #AAAAAA, #919191);  /*Safari 5.1, Chrome 10+ */  
+  	background: -moz-linear-gradient(top, #AAAAAA, #919191); /* Firefox 3.6+ */
+  	background: -ms-linear-gradient(top, #AAAAAA, #919191); /* IE 10 */
+  	background: -o-linear-gradient(top, #AAAAAA, #919191); /* Opera 11.10+ */
 }
 
 .appTitle {
-	background-color: #423E3C;
+	padding-top: 10px; 
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: #2d2d2d;
+	height: 15px;
 }
 
 
@@ -55,8 +96,9 @@ fieldset {
 }
 
 h2 {
-	margin: 0 110px 20px;
-	color: #fff;
+	margin-left: 0;
+	margin-right: 0;
+	color: #2B5599;
 }
 
 

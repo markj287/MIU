@@ -23,13 +23,15 @@
 	</div> <!-- end .appTitle -->
 
 	<div class="featured">
-		<img src="images/featuredLogo.png" width="173px" height="215px" alt="Note Bud Features">
+		
 	</div>
 
-	<input class="buttons" type="button" value="Sign In" onclick="location.href='signin.html'; return false;" />
-	<input class="buttons" type="button" value="Sign Up" onclick="location.href='signup.html'; return false;" />
-	<input class="buttons" type="button" value="Just Note" onclick="location.href='addnote.html'; return false;" />
-	
+	<div class="btnGroup">
+		<input class="newNoteBtn" type="button" value="All my notes" onclick="location.href='signin.html'; return false;" />
+		<input class="myNotesBtn" type="button" value="Create new note" onclick="location.href='signup.html'; return false;" />
+		<input class="newBookBtn" type="button" value="Create new notebook" onclick="location.href='addnote.html'; return false;" />
+	</div> <!-- end .btnGroup -->
+
 	<script type="text/javascript" src="json.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 
