@@ -1,0 +1,96 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>NoteBud</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="description" content="My first web app" />
+	<meta name="author" content="Mark Johnson" />
+	<meta name="keywords" content="notes, ios, android, web, apps, bud" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow" />
+			
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link href="main.css" type="text/css" rel="stylesheet" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+<!-- ===================================HOME PAGE=============================== -->  
+<div data-role="page" id="home" data-theme="e">
+
+	<div data-role="header" >
+		<h1>Notebud</h1>
+	</div><! -- end header -->
+		
+	<div data-role="content">
+		<p>This is the content for this page.</p>
+		<p><a href="#cNotebook" data-role="button" data-icon="arrow-r">Create a notebook</a></p>
+		<p><a href="#cNote" data-role="button" data-icon="arrow-r">Create a note</a></p>
+		<p><a href="#viewNotes" data-role="button" data-icon="arrow-r">View my notes</a></p>
+	</div> <! -- end content div -->
+	
+</div> <! -- end page div -->
+<!-- ===================================END INITIAL HOME PAGE========================= --> 
+
+<!-- ===================================CREATE NOTEBOOK PAGE======================= -->   
+<div data-role="page" id="cNotebook" data-add-back-btn="true">
+
+	<div data-role="header" >
+		<h1>Create new notebook</h1>
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<p>New notebook here</p>
+	</div> <! -- end content div -->
+
+</div><! -- end page div -->
+<!-- ===================================END NOTEBOOK PAGE======================== -->    
+
+<!-- ===================================CREATE NEW NOTE PAGE====================== -->    
+<div data-role="page" id="cNote" data-add-back-btn="true">
+
+	<div data-role="header" >
+		<h1>Create new note</h1>
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<p>New notes here.</p>
+	</div> <! -- end content div -->
+
+</div><! -- end page div -->
+<!-- ===================================END NEW NOTE PAGE======================= --> 
+
+<!-- ===================================BROWSE MY NOTES PAGE===================== -->    
+<div data-role="page" id="viewNotes" data-add-back-btn="true">
+
+	<div data-role="header" >
+		<h1>All my notes</h1>
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<p>All my notes here</p>
+	</div> <! -- end content div -->
+
+</div><! -- end page div -->
+<!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+<!-- JavaScript under here -->
+<script type="text/javascript" src="js/main.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</body>
+</html>
+
