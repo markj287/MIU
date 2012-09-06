@@ -69,7 +69,48 @@
 	</div><! -- end header -->
 
 	<div data-role="content">
-		<p>New notes here.</p>
+		<form action="#" method="post" id="noteForm">
+		<fieldset id="newNoteField">
+				<ul id="errors"></ul>
+				
+				<ul id="noteInfo">
+					<li id="select"><label for="group">Add to Notes</label></li>
+					<li><label for="notetitle" class="fnote">Title</label><input type="text" id="notetitle" /></li>
+					<li><label for="noteinfo" class="fnote">Note</label><textarea id="noteinfo"></textarea></li>
+					<li><input type="hidden" value="true" /></li>
+					<li><label for="date" class="fnote">Date</label><input type="date" id="date" /></li>
+					<li><label for="items" class="fnote">Number of items</label><input type="range" min="0" max="20" id="items" /></li>
+					<li><label for="attach" class="fnote">Attach a File</label><input type="file" id="attach" /></li>
+					
+					<li>Favorite Note
+						<ul>
+							<li><input type="radio" value="Yes" id="fav" name="favNote" /><label for="yes" >Yes</label></li>
+						</ul>
+					</li>
+				</ul> <!-- en ul #noteInfo-->
+						<!--
+						<li><label for="category" >Category</label>	
+						<select id="categories">
+						<optgroup label="Options">
+						<option value="Choose:">Choose:</option>
+						<option value="Grocery">Grocery</option>
+						<option value="Fitness">Fitness</option>
+						<option value="Entertainment">Entertainment</option>
+						<option value="Dining">Dining</option>
+						<option value="Shopping">Shopping</option>
+						<option value="Sports">Sports</option>
+						</optgroup>
+						</select>	
+						</li>				
+						</fieldset>-->
+		
+			<input type="submit" value="SAVE NOTE" id="submit" />
+				<a href="#" id="clear">Clear Info</a>
+				<a href="#" id="displayLink">Display Info</a>
+				<a href="addnote.html" id="addNote" >Add Note</a>
+				
+		</form> <!-- end main form -->
+		
 	</div> <! -- end content div -->
 
 </div><! -- end page div -->
