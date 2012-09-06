@@ -4,8 +4,8 @@
 	padding: 0;
 }  /* universal reset */
 
-fImage {
-	margin: 10px;	
+.fImage {
+	margin: 50px;	
 }
 
 .appLogo {
