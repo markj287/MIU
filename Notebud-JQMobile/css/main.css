@@ -4,6 +4,10 @@
 	padding: 0;
 }  /* universal reset */
 
+fImage {
+	margin: 10px;	
+}
+
 .appLogo {
 	color: #F07830;
 	font-size: 42px;
