@@ -29,6 +29,7 @@
 
 </head>
 <body>
+
 <!-- ===================================HOME PAGE=============================== -->  
 <div data-role="page" id="home" data-theme="a">
 
@@ -40,20 +41,17 @@
 	<div data-role="content">
 		<img class="fImage" src="images/note-bud-logo.png" width="281px" height="182px" alt="NoteBud Logo">
 		
-		<form ui-listview-filter="inset" role="search"></form>
-		<ul data-role="listview" data-filter="true" data-inset="true">	
-		</ul>
-		
 		<p><a href="#cNotebook" data-role="button" data-icon="arrow-r">Create a notebook</a></p>
 		<p><a href="#cNote" data-role="button" data-icon="arrow-r">Create a note</a></p>
 		<p><a href="#viewNotes" data-role="button" data-icon="arrow-r">View my notes</a></p>
 	</div> <! -- end content div -->
 	
 </div> <! -- end page div -->
-<!-- ===================================END INITIAL HOME PAGE========================= --> 
+<!-- ===================================END INITIAL HOME PAGE======================== --> 
+
 
 <!-- ===================================CREATE NOTEBOOK PAGE======================= -->   
-<div data-role="page" id="cNotebook" data-add-back-btn="true">
+<div data-role="page" id="cNotebook">
 
 	<div data-role="header" >
 		<h1>Create New Notebook</h1>
@@ -62,12 +60,23 @@
 	<div data-role="content">
 		<p>New notebook here</p>
 	</div> <! -- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
 
 </div><! -- end page div -->
 <!-- ===================================END NOTEBOOK PAGE======================== -->    
 
+
 <!-- ===================================CREATE NEW NOTE PAGE====================== -->    
-<div data-role="page" id="cNote" data-add-back-btn="true">
+<div data-role="page" id="cNote">
 
 	<div data-role="header" >
 		<h1>Create New Note</h1>
@@ -92,22 +101,7 @@
 							<li><input type="radio" value="Yes" id="fav" name="favNote" /><label for="yes" >Yes</label></li>
 						</ul>
 					</li>
-				</ul> <!-- en ul #noteInfo-->
-						<!--
-						<li><label for="category" >Category</label>	
-						<select id="categories">
-						<optgroup label="Options">
-						<option value="Choose:">Choose:</option>
-						<option value="Grocery">Grocery</option>
-						<option value="Fitness">Fitness</option>
-						<option value="Entertainment">Entertainment</option>
-						<option value="Dining">Dining</option>
-						<option value="Shopping">Shopping</option>
-						<option value="Sports">Sports</option>
-						</optgroup>
-						</select>	
-						</li>				
-						</fieldset>-->
+				</ul> 
 		
 			<input type="submit" value="SAVE NOTE" id="submit" />
 				<a href="#" id="clear">Clear Info</a>
@@ -117,12 +111,23 @@
 		</form> <!-- end main form -->
 		
 	</div> <! -- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
 
 </div><! -- end page div -->
 <!-- ===================================END NEW NOTE PAGE======================= --> 
 
+
 <!-- ===================================BROWSE MY NOTES PAGE===================== -->    
-<div data-role="page" id="viewNotes" data-add-back-btn="true">
+<div data-role="page" id="viewNotes">
 
 	<div data-role="header" >
 		<h1>All My Notes</h1>
@@ -131,18 +136,30 @@
 	<div data-role="content">
 		<p>All my notes here</p>
 	</div> <! -- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
 
 </div><! -- end page div -->
 <!-- ===================================END BROWSE NOTES PAGE===================== --> 
 
-<!-- ===================================BROWSE HELP PAGE SECTIONS===================== -->   
-<div data-role="page" id="help" data-add-back-btn="true">
+
+<!-- ===================================HELP PAGE SECTIONS======================== -->   
+<div data-role="page" id="help">
+	
 	<div data-role="header">
 		<h1>Help Section</h1>	
 	</div> <!-- end header -->
 	
 	<div data-role="content">
-		<ul data-role="listview">
+		<ul data-role="listview" data-inset="true">
 			<li><a href="#helpNotes">Creating Notes</a></li>
 			<li><a href="#helpNotebook">Creating Notebooks</a></li>
 				<!--<p>.</p>-->
@@ -151,11 +168,23 @@
 		</ul>	
 	</div> <!-- end content-->
 	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
 </div> <!-- end halp page fiv -->
+<!-- ===================================END HELP PAGE============================ --> 
 
-<!-- ===================================END BROWSE NOTES PAGE===================== --> 
 
-<div data-role="page" id="helpNotes" data-add-back-btn="true">
+<!-- =================================== NOTES PAGE============================= --> 
+<div data-role="page" id="helpNotes">
+
 	<div data-role="header">
 		<h1>Creating Notes</h1>
 	</div> <!-- end header -->
@@ -168,11 +197,23 @@
 		 <p>All other fields are option. When finished press save!</p>
 	</div>
 	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
 </div> <!--end page div-->	
+<!-- ===================================END NOTES PAGE========================== --> 
 
-<!-- ===================================END BROWSE NOTES PAGE===================== --> 
 
-<div data-role="page" id="helpNotebook" data-add-back-btn="true">
+<!-- =================================== NOTEBOOK PAGE========================== --> 
+<div data-role="page" id="helpNotebook">
+
 	<div data-role="header">
 		<h1>Creating Notebooks</h1>
 	</div> <!-- end header -->
@@ -182,11 +223,23 @@
 		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
 	</div> <!-- end content div -->
 	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
 </div> <!-- end page div -->
-
 <!-- ===================================END BROWSE NOTES PAGE===================== --> 
 
-<div data-role="page" id="helpDraw" data-add-back-btn="true">
+
+<!-- ===================================DRAW NOTES PAGE========================= --> 
+<div data-role="page" id="helpDraw">
+	
 	<div data-role="header">
 		<h1>Creating Notebooks</h1>
 	</div> <!-- end header -->
@@ -195,9 +248,19 @@
 		<p></p>	
 	</div> <!-- end content div -->
 	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Search</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
 </div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
 
-<!-- ===================================END BROWSE NOTES PAGE===================== --> 
 
 <!-- JavaScript under here -->
 <script type="text/javascript" src="js/main.js"></script>
