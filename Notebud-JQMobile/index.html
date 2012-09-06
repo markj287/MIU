@@ -34,6 +34,7 @@
 
 	<div data-role="header" >
 		<h1>Notebud</h1>
+		<a href="#help" data-icon="gear" class="ui-btn-right">Help</a>
 	</div><! -- end header -->
 		
 	<div data-role="content">
@@ -129,6 +130,51 @@
 
 </div><! -- end page div -->
 <!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+<!-- ===================================BROWSE HELP PAGE SECTIONS===================== -->   
+<div data-role="page" id="help" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Help Section</h1>	
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#helpNotes">Creating Notes</a></li>
+				<!--<p>To create a new note, simple press create new note. You must enter a title and a few notes, all other fields are optional.</p>-->
+			<li><a href="#helpNotebook">Creating Notebooks</a></li>
+				<!--<p>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness.</p>-->
+			<li><a href="#helpDraw">Drawing Notes</a></li>
+				<!--<p>To begin to draw your notes, simple select the draw notes icon and begin to draw.</p>-->
+		</ul>
+	
+	<div data-role="page" id="helpNotebook" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Creating Notebooks</h1>
+		<p></p>	
+	</div> <!-- end header -->
+	
+	<div data-role="page" id="helpDraw" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Drawing Notes</h1>
+		<p></p>	
+	</div> <!-- end header -->
+	
+	
+	</div> <!-- end content-->
+</div> <!-- end halp page fiv -->
+
+<!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+<div data-role="page" id="helpNotes" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Creating Notes</h1>
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p></p>	
+	</div>
+	
+</div> <!--end page div-->	
 
 <!-- JavaScript under here -->
 <script type="text/javascript" src="js/main.js"></script>
