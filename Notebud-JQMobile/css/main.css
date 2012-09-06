@@ -17,8 +17,8 @@
 
 ul li {
 	margin-left: 25px;
-	color: white;
-	list-style-type: disc;
+	color: black;
+	list-style-type: none;
 }
 
 .featured {
