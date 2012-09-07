@@ -33,21 +33,35 @@
 <!-- ===================================HOME PAGE=============================== -->  
 <div data-role="page" id="home" data-theme="a">
 
-	<div data-role="header" >
+	<div data-role="header">
 		<h1>Notebud</h1>
-		<a href="#help" data-icon="gear" class="ui-btn-right">Help</a>
+		<a href="#help" data-icon="gear" class="ui-btn-left">Help</a>
+		<a href="#info"  data-icon="info" class="ui-btn-right" data-rel="dialog" data-transition="slidedown" data-rel="back">Info</a>
 	</div><! -- end header -->
 		
 	<div data-role="content">
 		<img class="fImage" src="images/note-bud-logo.png" width="281px" height="182px" alt="NoteBud Logo">
 		
-		<p><a href="#cNotebook" data-role="button" data-icon="arrow-r">Create a notebook</a></p>
-		<p><a href="#cNote" data-role="button" data-icon="arrow-r">Create a note</a></p>
-		<p><a href="#viewNotes" data-role="button" data-icon="arrow-r">View my notes</a></p>
+		<p><a href="#cNotebook" data-role="button" data-icon="plus">Create a notebook</a></p>
+		<p><a href="#cNote" data-role="button" data-icon="plus">Create a note</a></p>
+		<p><a href="#viewNotes" data-role="button" data-icon="grid">View my notes</a></p>
 	</div> <! -- end content div -->
 	
 </div> <! -- end page div -->
 <!-- ===================================END INITIAL HOME PAGE======================== --> 
+
+
+<!-- ===================================INFO PAGE================================ -->  
+<div data-role="page" id="info">
+	<div data-role="header">
+		<h1>Notebud Info</h1>
+	</div><! -- end header -->
+	
+	<div data-role="content">
+		<p>This app was developed by Mark Johnson as part of his Mobile Interface Usability class. He is very talented young programmer who attends Fullsail University Online.</p>
+	</div>
+</div> <!--end page div-->
+<!-- ===================================END INFO PAGE============================= -->  
 
 
 <!-- ===================================CREATE NOTEBOOK PAGE======================= -->   
@@ -58,7 +72,20 @@
 	</div><! -- end header -->
 
 	<div data-role="content">
-		<p>New notebook here</p>
+		<div data-role="fieldcontain">
+			<label for="basic">Notebook Name:</label>
+			<input type="text" name="name" id="basic" data-mini="true" />
+		</div>
+		
+	<fieldset class="ui-grid-a">
+		<div class="ui-block-a">
+			<button type="submit" data-corner="true">Cancel</button>
+		</div>
+		<div class="ui-block-b">
+			<button type="submit">Save</button>
+		</div>
+	</fieldset>	
+	
 	</div> <! -- end content div -->
 	
 	<div data-role="footer" data-position="fixed">
@@ -83,7 +110,7 @@
 	</div><! -- end header -->
 
 	<div data-role="content">
-		<form action="#" method="post" id="noteForm">
+		<form action="#" method="post" id="noteForm" data-mini="true">
 		<fieldset id="newNoteField">
 				<ul id="errors"></ul>
 				
@@ -183,7 +210,7 @@
 
 
 <!-- =================================== NOTES PAGE============================= --> 
-<div data-role="page" id="helpNotes">
+<div data-role="page" id="helpNotes" data-add-back-btn="true">
 
 	<div data-role="header">
 		<h1>Creating Notes</h1>
@@ -212,7 +239,7 @@
 
 
 <!-- =================================== NOTEBOOK PAGE========================== --> 
-<div data-role="page" id="helpNotebook">
+<div data-role="page" id="helpNotebook" data-add-back-btn="true">
 
 	<div data-role="header">
 		<h1>Creating Notebooks</h1>
@@ -238,7 +265,7 @@
 
 
 <!-- ===================================DRAW NOTES PAGE========================= --> 
-<div data-role="page" id="helpDraw">
+<!-- <div data-role="page" id="helpDraw" data-add-back-btn="true"> -->
 	
 	<div data-role="header">
 		<h1>Creating Notebooks</h1>
