@@ -63,13 +63,13 @@ window.addEventListener("DOMContentLoaded", function (){
 				$('noteForm').style.display = "none";
 				$('clear').style.display = "inline";
 				$('displayLink').style.display = "none";
-				$('addNote').style.display = "inline";
+				$('viewNotes').style.display = "inline";
 				break;
 			case "off":
 				$('noteForm').style.display = "block";
 				$('clear').style.display = "inline";
 				$('displayLink').style.display = "inline";
-				$('addNote').style.display = "none";
+				$('viewNotes').style.display = "none";
 				break;
 			default:
 				return false;
