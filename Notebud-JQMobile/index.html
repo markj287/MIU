@@ -113,36 +113,46 @@
 
 	<div data-role="content">
 			<form accept="" method="post" id="newNote">
+			
+		<div data-role="fieldcontain">
+			<label for="shipping">Category</label>
+			<select name="category" id="categories" data-native-menu="false">
+				<option data-placeholder="true">Select a Category</option>
+					<option value="Dining">Dining</option>
+					<option value="Entertainment">Entertainment</option>
+					<option value="Fitness">Fitness</option>
+					<option value="Grocery">Grocery</option>
+					<option value="Shopping">Shopping</option>
+					<option value="Sports">Sports</option>
+			</select>
+		</div> <!--end categories-->
+	
 		
 		<div data-role="fieldcontain">
 			<label for="title">Title</label>
-			<input type="text" name="nNoteTitle" id="nNoteTitle">
-		</div>
+			<input type="text" name="noteTitle" id="noteTitle">
+		</div><!--end note title-->
 	
-		<div data-role="fieldcontain">
-			<label for="title">Time</label>
-			<input type="time" name="nNoteTitle" id="nNoteTitle">
-		</div>
 		
 		<div data-role="fieldcontain">
-			<label for="title">Notes</label>
+			<label for="noteInfo">Notes</label>
 			<textarea></textarea>
-		</div>
+		</div><!--end note text-->
 		
 		<div data-role="fieldcontain">
-			<label for="title">Number of Items</label>
+			<label for="items">Number of Items</label>
 			<input type="range" name="numOfItems" id="numOfItems" value="0" min="0" max="99">
-		</div>
+		</div><!--end number of items-->
 		
 		<div data-role="fieldcontain">
-			<label for="title">Favorite Note?</label>
+			<label for="fNote">Favorite Note?</label>
 			<select data-role="slider">
-				<option value="off">Yes</option>
-				<option value="on">No</option>
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
 			</select>
-		</div>
+		</div><!--end favorite note-->
 		
-		<div data-role="fieldcontain">
+		<!--<div data-role="fieldcontain">
 			<fieldset data-role="controlgroup">
 				<legend>Your role</legend>
 				<input type="radio" value="radioBtn" name="name" id="name-1">
@@ -168,25 +178,8 @@
 				<input type="checkbox" value="checkBox" name="name" id="name-3.3">
 				<label for="name-3.3">radioBtm3</label>
 			</fieldset>
-		</div>
+		</div>-->
 		
-		<div data-role="fieldcontain">
-			<label for="shipping">Shipping</label>
-			<select name="shipping-prices" id="company-shipping" data-native-menu="false">
-			<option data-placeholder="true">Please Select Shipping Method</option>
-				<optgroup label="FEDEX">
-					<option value="express">Express</option>
-					<option value="overnight">Overnight</option>
-					<option value="standard">Standard</option>
-				</optgroup>
-				
-				<optgroup label="USPS">
-					<option value="express">Express</option>
-					<option value="overnight">Overnight</option>
-					<option value="standard">Standard</option>
-				</optgroup>
-			</select>
-		</div>
 		
 		<input type="reset" value="Reset" data-theme="a">
 		<input type="submit" value="submit form" data-theme="b">
