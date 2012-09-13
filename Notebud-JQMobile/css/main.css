@@ -4,6 +4,12 @@
 	padding: 0;
 }  /* universal reset */
 
+label.errors {
+	display: block;
+	margin: 12px 0;
+	color: #ff0000;	
+}
+
 .fImage {
 	margin: 0 8px;	
 }

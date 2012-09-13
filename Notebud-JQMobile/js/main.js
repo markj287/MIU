@@ -1,7 +1,6 @@
 //Mark Johnson
 //VFW Project 3
 
-
 // Wait until the DOM is ready 
 window.addEventListener("DOMContentLoaded", function (){
 	// getElementById function
