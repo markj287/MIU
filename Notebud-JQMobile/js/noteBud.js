@@ -1,8 +1,9 @@
 var saveNotes = function(data) {
-	console.log(data);
+	alert(data);
 };
 
 $(document).on(function() { 
+
 	var newNoteForm = $('#newNote');
 	
 	newNoteForm.validate({

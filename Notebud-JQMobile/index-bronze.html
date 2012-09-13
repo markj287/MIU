@@ -115,30 +115,30 @@
 	</div><! -- end header -->
 
 	<div data-role="content">
-		<form action="#" method="post" id="noteForm" data-mini="true">
+		<form action="#" method="post" id="noteForm">
 		<fieldset id="newNoteField">
 				<ul id="errors"></ul>
 				
 				<ul id="noteInfo">
 					<li id="select"><label for="group">Add to Notes</label></li>
-					<li><label for="notetitle" class="fnote">Title</label><input type="text" id="notetitle" /></li>
-					<li><label for="noteinfo" class="fnote">Note</label><textarea id="noteinfo"></textarea></li>
-					<li><input type="hidden" value="true" /></li>
-					<li><label for="date" class="fnote">Date</label><input type="date" id="date" /></li>
-					<li><label for="items" class="fnote">Number of items</label><input type="range" min="0" max="20" id="items" /></li>
-					<li><label for="attach" class="fnote">Attach a File</label><input type="file" id="attach" /></li>
+					<li><label for="notetitle" class="fnote">Title</label><input type="text" id="notetitle" / data-role="none" value placeholder="Ex: Grocery Shopping"></li>
+					<li><label for="noteinfo" class="fnote">Note</label><textarea id="noteinfo" data-role="none" placeholder="Type notes here"></textarea></li>
+					<li><input type="hidden" value="true"  data-role="none" /></li>
+					<li><label for="date" class="fnote">Date</label><input type="date" id="date" data-role="none" value placeholder="YYYY-MM-DD"/></li>
+					<li><label for="items" class="fnote">Number of items</label><input type="range" min="10" max="20" id="items"  data-role="none"/></li>
+					<li><label for="attach" class="fnote">Attach a File</label><input type="file" id="attach"  data-role="none"/></li>
 					
 					<li>Favorite Note
 						<ul>
-							<li><input type="radio" value="Yes" id="fav" name="favNote" /><label for="yes" >Yes</label></li>
+							<li><input type="radio" value="Yes" id="fav" name="favNote"  data-role="none"/><label for="yes" >Yes</label></li>
 						</ul>
 					</li>
 				</ul> 
 		
-			<input type="submit" value="SAVE NOTE" id="submit" />
-				<a href="#" id="clear">Clear Info</a>
-				<a href="#" id="displayLink">Display Info</a>
-				<a href="addnote.html" id="addNote" >Add Note</a>
+			<input type="submit" value="SAVE NOTE" id="submit" data-role="none" />
+				<a href="#" id="clear" data-role="none">Clear Info</a>
+				<a href="#" id="displayLink" data-role="none">Display Info</a>
+				<a href="addnote.html" id="addNote" data-role="none">Add Note</a>
 				
 		</form> <!-- end main form -->
 		

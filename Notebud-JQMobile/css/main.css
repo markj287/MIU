@@ -10,6 +10,11 @@ label.errors {
 	color: #ff0000;	
 }
 
+.cancelBtn {
+	display: block;
+	margin: 20px 10px;
+}
+
 .fImage {
 	margin: 0 8px;	
 }
