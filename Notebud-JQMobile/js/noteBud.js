@@ -2,7 +2,7 @@ var saveNotes = function(data) {
 	console.log(data);
 };
 
-$document.on(function() { 
+$(document).on(function() { 
 	var newNoteForm = $('#newNote');
 	
 	newNoteForm.validate({
