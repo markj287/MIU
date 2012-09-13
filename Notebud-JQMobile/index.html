@@ -289,12 +289,23 @@
 	</div> <!-- end header -->
 	
 	<div data-role="content">
-		<ul data-role="listview" data-inset="true">
-			<li><a href="#helpNotes" data-transition="slide">Creating Notes</a></li>
-			<li><a href="#helpNotebook" data-transition="slide">Creating Notebooks</a></li>
-			<li><a href="#helpDraw" data-transition="slide">Drawing Notes</a></li>
-				<!--<p>To begin to draw your notes, simple select the draw notes icon and begin to draw.</p>-->
-		</ul>	
+		<div data-role="collapsible" data-theme="e">
+			<h3>Creating Notes</h3>
+			<span>To create a new note, simple press create new note. <img src="images/new-note-thum.png" alt="new-note-thum" width="264" height="55" /></br> Next enter a title and a few notes, all other fields are optional. <img src="images/select-options-thumb.png" alt="select-options-thumb" width="254" height="239" />	</br> All other fields are option. When finished press save!</span>
+		</div>
+		
+		<div data-role="collapsible" data-theme="e">
+			<h3>Creating Notebooks</h3>
+				<span>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness.</span>
+		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+		</div>
+		
+		<div data-role="collapsible" data-theme="e">
+			<h3>Drawing Notes</h3>
+			<span>Drawing notes is simple. Just press the draw button and begin drawing.</span>
+		</div>
+	
+		
 	</div> <!-- end content-->
 	
 	<div data-role="footer" data-position="fixed">
@@ -350,8 +361,7 @@
 	</div> <!-- end header -->
 	
 	<div data-role="content">
-		<p>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness</p>	
-		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+	
 	</div> <!-- end content div -->
 	
 	<div data-role="footer" data-position="fixed">
@@ -516,9 +526,8 @@
 <!-- JavaScript under here -->
 
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/noteBud.js"></script> <!--this is the same as main.js, i just decided to use a diff name-->
 
 
