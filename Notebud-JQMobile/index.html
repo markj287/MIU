@@ -130,7 +130,7 @@
 		
 		<div data-role="fieldcontain">
 			<label for="title">Title</label>
-			<input type="text" name="noteTitle" id="noteTitle">
+			<input type="text" name="noteTitle" id="noteTitle" value placeholder="Ex: Grocery Shopping">
 		</div><!--end note title-->
 	
 		
@@ -141,7 +141,12 @@
 		
 		<div data-role="fieldcontain">
 			<label for="items">Number of Items</label>
-			<input type="range" name="numOfItems" id="numOfItems" value="0" min="0" max="99">
+			<input type="range" name="numOfItems" id="numOfItems" value="0" min="0" max="99" value placeholder="10">
+		</div><!--end number of items-->
+		
+		<div data-role="fieldcontain">
+			<label for="noteDate">Date</label>
+			<input type="date" name="date" id="date" value placeholder="September 13, 2012">
 		</div><!--end number of items-->
 		
 		<div data-role="fieldcontain">
@@ -180,10 +185,14 @@
 			</fieldset>
 		</div>-->
 		
-		
-		<input type="reset" value="Reset" data-theme="a">
-		<input type="submit" value="submit form" data-theme="b">
-
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a">
+				<input type="submit" value="Submit" data-theme="e">
+			</div>
+			<div class="ui-block-b">
+				<input type="reset" value="Reset" data-theme="c">
+			</div>
+		</fieldset>
 
 	</form> <!--end form-->
 	
