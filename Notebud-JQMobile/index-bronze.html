@@ -44,6 +44,7 @@
 		<p><a href="#cNotebook" data-role="button" data-icon="plus" data-transition="flip">Create a notebook</a></p>
 		<p><a href="#cNote" data-role="button" data-icon="plus" data-transition="flip">Create a note</a></p>
 		<p><a href="#viewNotes" data-role="button" data-icon="grid" data-transition="flip">View my notes</a></p>
+		<p><a href="#news" data-role="button"  data-icon="grid" data-transition="flip">View News</a></p>
 	</div> <! -- end content div -->
 	
 </div> <! -- end page div -->
@@ -214,31 +215,92 @@
 
 </div><! -- end page div -->
 <!-- ===================================END BROWSE NOTES PAGE===================== --> 
+<div data-role="page" id="news" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>News</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>
+				<a href="#website">
+					<h3>My favorite websites</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite websites that i visit on a daily basis. Perhaps, my favorite one of them all is.</p>
+				</a>
+			</li>	
+			
+			<li>
+				<a href="#sports">
+					<h3>My favorite sports teams</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite sports teams. I live in Southern New Jersey so i like all philadelphia teams. The eagles, the phillies, the 76ers and the flyers. I can't really say which team is my favorite because i love them all.</p>
+				</a>
+			</li>
+				
+			<li>
+				<a href="#movie">
+					<h3>My favorite movie</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite movies that i have watched over my years of being on this earth. But my favorite movie of all time is Serendipity staring John Cusack and Kate Beckinsale. Set in the christmas time in New York two complete strangers meet three times in one night, John Cusack and Kate Beckinsale.</p>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== -->
 
 
 <!-- ===================================HELP PAGE SECTIONS======================== -->   
 <div data-role="page" id="help">
 	
 	<div data-role="header">
-		<h1>Help Section</h1>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#home" data-transition="flip">Home</a></li>
-				<li><a href="#" data-transition="flip">Settings</a></li>
-				<li><a href="index.html" data-transition="flip">Notebud</a></li>
-				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
-			</ul>
-		</div> <!--end navbar-->	
+		<h1>Help Section</h1>	
 	</div> <!-- end header -->
 	
 	<div data-role="content">
-		<ul data-role="listview" data-inset="true">
-			<li><a href="#helpNotes" data-transition="flip">Creating Notes</a></li>
-			<li><a href="#helpNotebook" data-transition="flip">Creating Notebooks</a></li>
-			<li><a href="#helpDraw" data-transition="flip">Drawing Notes</a></li>
-				<!--<p>To begin to draw your notes, simple select the draw notes icon and begin to draw.</p>-->
-		</ul>	
+		<div data-role="collapsible"  data-collapsed="false">
+			<h3>Creating Notes</h3>
+			<span>To create a new note, simple press create new note. <img src="images/new-note-thum.png" alt="new-note-thum" width="264" height="55" /></br> Next enter a title and a few notes, all other fields are optional. <img src="images/select-options-thumb.png" alt="select-options-thumb" width="254" height="239" />	</br> All other fields are option. When finished press save!</span>
+		</div>
+		
+		<div data-role="collapsible"  data-collapsed="false">
+			<h3>Creating Notebooks</h3>
+				<span>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness.</span>
+		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+		</div>
+		
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Drawing Notes</h3>
+			<span>Drawing notes is simple. Just press the draw button and begin drawing.</span>
+		</div>
+	
+		
 	</div> <!-- end content-->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
 	
 </div> <!-- end halp page fiv -->
 <!-- ===================================END HELP PAGE============================ --> 
