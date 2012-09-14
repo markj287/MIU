@@ -1,0 +1,423 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>NoteBud</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="description" content="My first web app" />
+	<meta name="author" content="Mark Johnson" />
+	<meta name="keywords" content="notes, ios, android, web, apps, bud" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow" />
+			
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+<!-- ===================================HOME PAGE=============================== -->  
+<div data-role="page" id="home" data-theme="e">
+
+	<div data-role="header">
+		<h1>Notebud Bronze</h1>
+		<a href="#help" data-icon="gear" class="ui-btn-left" data-transition="flip">Help</a>
+		<a href="#info"  data-icon="info" class="ui-btn-right" data-rel="dialog" data-transition="flip" data-rel="back">Info</a>
+	</div><! -- end header -->
+		
+	<div data-role="content">
+		<img class="fImage" src="images/note-bud-logo.png" width="281px" height="182px" alt="NoteBud Logo">
+		
+		<p><a href="#cNotebook" data-role="button" data-icon="plus" data-transition="flip">Create a notebook</a></p>
+		<p><a href="#cNote" data-role="button" data-icon="plus" data-transition="flip">Create a note</a></p>
+		<p><a href="#viewNotes" data-role="button" data-icon="grid" data-transition="flip">View my notes</a></p>
+		<p><a href="#news" data-role="button"  data-icon="grid" data-transition="flip">View News</a></p>
+	</div> <! -- end content div -->
+	
+</div> <! -- end page div -->
+<!-- ===================================END INITIAL HOME PAGE======================== --> 
+
+
+<!-- ===================================INFO PAGE================================ -->  
+<div data-role="page" id="info">
+	<div data-role="header">
+		<h1>Notebud Info</h1>
+	</div><! -- end header -->
+	
+	<div data-role="content">
+		<p>This app was developed by Mark Johnson as part of his Mobile Interface Usability class. He is very talented young programmer who attends Fullsail University Online.</p>
+	</div>
+</div> <!--end page div-->
+<!-- ===================================END INFO PAGE============================= -->  
+
+
+<!-- ===================================CREATE NOTEBOOK PAGE======================= -->   
+<div data-role="page" id="cNotebook">
+
+	<div data-role="header" >
+		<h1>Create New Notebook</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<label for="basic">Notebook Name:</label>
+			<input type="text" name="name" id="basic" data-mini="true" />
+		</div>
+		
+	<fieldset class="ui-grid-a">
+		<div class="ui-block-a">
+			<button type="submit" data-corner="true">Cancel</button>
+		</div>
+		<div class="ui-block-b">
+			<button type="submit">Save</button>
+		</div>
+	</fieldset>	
+	
+	</div> <! -- end content div -->
+
+</div><! -- end page div -->
+<!-- ===================================END NOTEBOOK PAGE======================== -->    
+
+
+<!-- ===================================CREATE NEW NOTE PAGE====================== -->    
+<div data-role="page" id="cNote">
+
+	<div data-role="header" >
+		<h1>Create New Note</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<form action="#" method="post" id="noteForm">
+		<fieldset id="newNoteField">
+				<ul id="errors"></ul>
+				
+				<ul id="noteInfo">
+					<li id="select"><label for="group">Add to Notes</label></li>
+					<li><label for="notetitle" class="fnote">Title</label><input type="text" id="notetitle" / data-role="none" value placeholder="Ex: Grocery Shopping"></li>
+					<li><label for="noteinfo" class="fnote">Note</label><textarea id="noteinfo" data-role="none" placeholder="Type notes here"></textarea></li>
+					<li><input type="hidden" value="true"  data-role="none" /></li>
+					<li><label for="date" class="fnote">Date</label><input type="date" id="date" data-role="none" value placeholder="YYYY-MM-DD"/></li>
+					<li><label for="items" class="fnote">Number of items</label><input type="range" min="10" max="20" id="items"  data-role="none"/></li>
+					
+					<li>Favorite Note
+						<ul>
+							<li><input type="radio" value="Yes" id="fav" name="favNote"  data-role="none"/><label for="yes" >Yes</label></li>
+						</ul>
+					</li>
+				</ul> 
+		
+			<input type="submit" value="SAVE NOTE" id="submit" data-role="none" />
+				<a href="#" id="clear" data-role="none">Clear Info</a>
+				<a href="#" id="displayLink" data-role="none">Display Info</a>
+				<a href="addnote.html" id="addNote" data-role="none">Add Note</a>
+				
+		</form> <!-- end main form -->
+		
+	</div> <! -- end content div -->
+
+</div><! -- end page div -->
+<!-- ===================================END NEW NOTE PAGE======================= --> 
+
+
+<!-- ===================================BROWSE MY NOTES PAGE===================== -->    
+<div data-role="page" id="viewNotes">
+
+	<div data-role="header" >
+		<h1>All My Notes</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><! -- end header -->
+
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>
+				<a href="http://en.wikipedia.org/wiki/BMW_7_Series">
+					<img src="images/bmw745.png" alt="audiA8" width="200px" height="200px" />
+					<h3>BMW 745</h3>
+					<p>The BMW 7 Series is a line of full-size luxury vehicles produced by the German automaker BMW.</p>
+					<p>first built in 1977</p>
+				</a>
+			</li>
+			<li>
+				<a href="#cherryHillMall">
+					<img src="images/cherryhill-mall.jpg" alt="cherryhill-mall" width="225" height="225" />
+					<h3>Go to cherry hill mall</h3>
+					<p>Go to cherry hill mall. Pick up some clothes for the wedding.</p>
+				</a>
+			</li>
+			<li>
+				<a href="http://en.wikipedia.org/wiki/Lexus_LX">
+					<img src="images/lexusLX.png" alt="lexusLX" width="200" height="176" />
+					<h3>LEXUS LX</h3>
+					<p>The Lexus LX is a full-size sport utility vehicle (SUV) sold by Lexus.</p>
+					<p>first built in 1996</p>
+				</a>
+			</li>
+			<li>
+				<a href="http://en.wikipedia.org/wiki/Mercedes-Benz_CLS-Class">
+					<img src="images/mercedezCls.png" alt="mercedezCls" width="200" height="175" />
+					<h3>MERCEDEZ BENZ CLS</h3>
+					<p>The Mercedes-Benz CLS is an executive-size sedan originally launched in 2004 and based on the W211 E-Class and was internally designated as the W219.</p>
+					<p>first built in 2004</p>
+				</a>
+			</li>
+			<li>
+				<a href="http://en.wikipedia.org/wiki/Audi_A8">
+					<img src="images/audiA8.png" alt="audiA8" width="200" height="176" />
+					<h3>AUDI A8</h3>
+					<p>The Audi A8 is a four-door, full-size, luxury sedan car manufactured and marketed by the German automaker Audi since 1994.</p>
+					<p>first built in 1994</p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/toyotaAvalon.png" alt="toyotaAvalon" width="200" height="176" />
+					<h3>TOYOTA AVALON</h3>
+					<p>The Toyota Avalon is a full-size car produced by Toyota in the United States, and is the flagship sedan of Toyota in the United States, Canada, Puerto Rico and the Middle East.</p>
+					<p>first built in 1994</p>
+				</a>
+			</li>
+		</ul>
+	</div> <! -- end content div -->
+	
+	<div data-role="fieldcontain">
+		<label for="search-mini"></label>
+		<input type="search" name="search-mini" id="search-mini" value="" data-mini="true" />
+	</div>
+
+</div><! -- end page div -->
+<!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+<div data-role="page" id="cherryHillMall" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Cherry Hill Mall</h1>
+	</div> <!-- end header -->
+	
+	<div data-role="content" class="ui-grid-a">
+		<div class="ui-block-a"><img src="images/cherry-hill-a.jpg" alt="cherry-hill-a" width="150" height="230" /></div>	
+		<div class="ui-block-b"><img src="images/cherry-hill-b.jpg" alt="cherry-hill-b" width="150" height="230" /></div>
+		<div class="ui-block-a"><img src="images/cherry-hill-a1.jpg" alt="cherry-hill-a1" width="150" height="230" /></div>
+		<div class="ui-block-b"><img src="images/cherry-hill-b1.jpg" alt="cherry-hill-b1" width="150" height="230" /></div>
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+<div data-role="page" id="news" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>News</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>
+				<a href="http://mashable.com">
+					<h3>My favorite websites</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite websites that i visit on a daily basis. Perhaps, my favorite one of them all is.</p>
+				</a>
+			</li>	
+			
+			<li>
+				<a href="#sports">
+					<h3>My favorite sports teams</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite sports teams. I live in Southern New Jersey so i like all philadelphia teams. The eagles, the phillies, the 76ers and the flyers. I can't really say which team is my favorite because i love them all.</p>
+				</a>
+			</li>
+				
+			<li>
+				<a href="#movie">
+					<h3>My favorite movie</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite movies that i have watched over my years of being on this earth. But my favorite movie of all time is Serendipity staring John Cusack and Kate Beckinsale. Set in the christmas time in New York two complete strangers meet three times in one night, John Cusack and Kate Beckinsale.</p>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== -->
+
+
+<!-- ===================================HELP PAGE SECTIONS======================== -->   
+<div data-role="page" id="help">
+	
+	<div data-role="header">
+		<h1>Help Section</h1>	
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<div data-role="collapsible"  data-collapsed="false">
+			<h3>Creating Notes</h3>
+			<span>To create a new note, simple press create new note. <img src="images/new-note-thum.png" alt="new-note-thum" width="264" height="55" /></br> Next enter a title and a few notes, all other fields are optional. <img src="images/select-options-thumb.png" alt="select-options-thumb" width="254" height="239" />	</br> All other fields are option. When finished press save!</span>
+		</div>
+		
+		<div data-role="collapsible"  data-collapsed="false">
+			<h3>Creating Notebooks</h3>
+				<span>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness.</span>
+		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+		</div>
+		
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Drawing Notes</h3>
+			<span>Drawing notes is simple. Just press the draw button and begin drawing.</span>
+		</div>
+	
+		
+	</div> <!-- end content-->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end halp page fiv -->
+<!-- ===================================END HELP PAGE============================ --> 
+
+
+<!-- =================================== NOTES PAGE============================= --> 
+<div data-role="page" id="helpNotes" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Creating Notes</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p>To create a new note, simple press create new note.</p>
+			<img src="images/new-note-thum.png" alt="new-note-thum" width="264" height="55" /></br>
+		 <p>Next enter a title and a few notes, all other fields are optional.</p>
+		 	<img src="images/select-options-thumb.png" alt="select-options-thumb" width="254" height="239" />
+		 <p>All other fields are option. When finished press save!</p>
+	</div>
+	
+</div> <!--end page div-->	
+<!-- ===================================END NOTES PAGE========================== --> 
+
+
+<!-- =================================== NOTEBOOK PAGE========================== --> 
+<div data-role="page" id="helpNotebook" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Creating Notebooks</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness</p>	
+		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+	</div> <!-- end content div -->
+	
+</div> <!-- end page div -->
+<!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+
+<!-- ===================================DRAW NOTES PAGE========================= --> 
+<div data-role="page" id="helpDraw" data-add-back-btn="true"> 
+	
+	<div data-role="header">
+		<h1>Creating Notebooks</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="flip">Home</a></li>
+				<li><a href="#" data-transition="flip">Settings</a></li>
+				<li><a href="index.html" data-transition="flip">Notebud</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="flip">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p></p>	
+	</div> <!-- end content div -->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+
+
+<!-- JavaScript under here -->
+<script type="text/javascript" src="js/main.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</body>
+</html>
+

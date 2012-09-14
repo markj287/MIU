@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Mark Johnson Visual Frameworks 01 Project 2 -->
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="My first web app" />
+		<meta name="author" content="Mark Johnson" />
+		<meta name="keywords" content="notes, ios, android, web, apps, bud" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<meta name="viewport" content="target-densitydpi=device-dpi" /> <!-- tells devlopers what screen resolutions are for -->
+		<meta name="HandheldFriendly" content="True" /> <!-- allows aloder mobile browsers to view without scaling -->
+		<meta name="MobileOptimized" content= "320" />
+		<meta name="robots" content="noindex, nofollow" />
+		<link href="main.css" type="text/css" rel="stylesheet" />
+		<title>Notebud</title>
+	</head>
+
+<body>
+	<div class="content">
+
+	<div class="appTitle">
+		<h2>Notebud</h2>
+
+		<div class="search">
+  			<form action="?" method="get">
+    			<input type="search"/>
+  			</form>
+		</div>
+
+	</div> <!-- end .appTitle -->
+
+	<div class="featured">
+		<h1 class="appLogo">NoteBud</h1><img src="images/notebud-logo.png" width="67px" height="70px" alt="NoteBud Logo">
+		<ul>
+			<li>Stay sync across devices</li>
+			<li>Hand draw picture notes</li>
+			<li>Share your notes with anyone</li>
+			<li>Organize your life</li>
+		</ul>
+	</div>
+
+
+	<div class="btnGroup">
+		<input class="newNoteBtn" type="button" value="All my notes" onclick="location.href='signin.html'; return false;" />
+		<input class="myNotesBtn" type="button" value="Create new note" onclick="location.href='signup.html'; return false;" />
+		<input class="newBookBtn" type="button" value="Create new notebook" onclick="location.href='addnote.html'; return false;" />
+	</div> <!-- end .btnGroup -->
+
+	<script type="text/javascript" src="json.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+	
+
+</div> <!-- end .content -->
+</body>
+
+</html>

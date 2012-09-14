@@ -1,0 +1,548 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>NoteBud</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="description" content="My first web app" />
+	<meta name="author" content="Mark Johnson" />
+	<meta name="keywords" content="notes, ios, android, web, apps, bud" />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow" />
+			
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="themes/note-bud-app.min.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+</head>
+<body>
+
+<!-- ===================================HOME PAGE=============================== -->  
+<div data-role="page" id="home" data-theme="a">
+
+	<div data-role="header">
+		<h1>Notebud</h1>
+		<a href="#help" data-icon="gear" class="ui-btn-left">Help</a>
+		<a href="#info"  data-icon="info" class="ui-btn-right" data-rel="dialog" data-transition="slidedown" data-rel="back">Info</a>
+	</div><!-- end header -->
+		
+	<div data-role="content">
+		<img class="fImage" src="images/note-bud-logo.png" width="281px" height="182px" alt="NoteBud Logo">
+		
+		<p><a href="#cNotebook" data-role="button" data-icon="arrow-r" data-transition="slide">Create a notebook</a></p>
+		<p><a href="#cNote" data-role="button" data-icon="arrow-r" data-transition="slide">Create a note</a></p>
+		<p><a href="#viewNotes" data-role="button" data-icon="grid" data-transition="slide">View my notes</a></p>
+		<p><a href="#news" data-role="button"  data-icon="grid" data-transition="slide">View News</a></p>
+	</div> <!-- end content div -->
+	
+</div> <!-- end page div -->
+<!-- ===================================END INITIAL HOME PAGE======================== --> 
+
+
+<!-- ===================================INFO PAGE================================ -->  
+<div data-role="page" id="info">
+	<div data-role="header">
+		<h1>Notebud Info</h1>
+	</div><!-- end header -->
+	
+	<div data-role="content">
+		<p>This app was developed by Mark Johnson as part of his Mobile Interface Usability class. He is very talented young programmer who attends Fullsail University Online.</p>
+	</div>
+</div> <!--end page div-->
+<!-- ===================================END INFO PAGE============================= -->  
+
+
+<!-- ===================================CREATE NOTEBOOK PAGE======================= -->   
+<div data-role="page" id="cNotebook">
+
+	<div data-role="header" >
+		<h1>Create New Notebook</h1>
+	</div><!-- end header -->
+
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<label for="basic">Notebook Name:</label>
+			<input type="text" name="name" id="basic" data-mini="true" />
+		</div>
+		
+	<fieldset class="ui-grid-a">
+		<div class="ui-block-a">
+			<button type="submit" data-corner="true">Cancel</button>
+		</div>
+		<div class="ui-block-b">
+			<button type="submit">Save</button>
+		</div>
+	</fieldset>	
+	
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+
+</div><!-- end page div -->
+<!-- ===================================END NOTEBOOK PAGE======================== -->    
+
+
+<!-- ===================================CREATE NEW NOTE PAGE====================== -->    
+<div data-role="page" id="cNote">
+
+	<div data-role="header" >
+		<h1>Create New Note</h1>
+	</div><!-- end header -->
+
+	<div data-role="content">
+			<form accept="" method="post" id="newNote">
+			
+		<div data-role="fieldcontain">
+			<label for="shipping">Category</label>
+			<select name="category" id="categories" data-native-menu="false">
+				<option data-placeholder="true">Select a Category</option>
+					<option value="Dining">Dining</option>
+					<option value="Entertainment">Entertainment</option>
+					<option value="Fitness">Fitness</option>
+					<option value="Grocery">Grocery</option>
+					<option value="Shopping">Shopping</option>
+					<option value="Sports">Sports</option>
+			</select>
+		</div> <!--end categories-->
+	
+		
+		<div data-role="fieldcontain">
+			<label for="title">Title</label>
+			<input type="text" name="noteTitle" id="noteTitle" value placeholder ="Ex: Grocery Shopping" class ="required">
+		</div><!--end note title-->
+	
+		
+		<div data-role="fieldcontain">
+			<label for="noteInfo" value placeholder="Type notes here">Notes</label>
+			<textarea value placeholder="Type notes here"></textarea>
+		</div><!--end note text-->
+		
+		<div data-role="fieldcontain">
+			<label for="items">Number of Items</label>
+			<input type="range" name="numOfItems" id="numOfItems" value="10" min="0" max="99">
+		</div><!--end number of items-->
+		
+		<div data-role="fieldcontain">
+			<label for="noteDate">Date</label>
+			<input type="date" name="date" id="date" value placeholder="YYYY-MM-DD">
+		</div><!--end number of items-->
+		
+		<div data-role="fieldcontain">
+			<label for="fNote">Favorite Note?</label>
+			<select data-role="slider">
+				<option value="Yes">Yes</option>
+				<option value="No">No</option>
+			</select>
+		</div><!--end favorite note-->
+		
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a">
+				<input type="submit" value="Submit" data-theme="e">
+			</div>
+			<div class="ui-block-b">
+				<a href="#home" class="cancelBtn">Cancel</a>
+				<!--<input type="reset" value="Reset" data-theme="c">-->
+			</div>
+		</fieldset>
+
+	</form> <!--end form-->
+	
+	</div> <!-- end content div -->
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+
+</div><!-- end page div -->
+<!-- ===================================END NEW NOTE PAGE======================= --> 
+
+
+<!-- ===================================BROWSE MY NOTES PAGE===================== -->    
+<div data-role="page" id="viewNotes">
+
+	<div data-role="header" >
+		<h1>All My Notes</h1>
+	</div><!-- end header -->
+
+	<div data-role="content">
+		<ul data-role="listview" data-filter="true">
+			<li>
+				<a href="#bmw">
+					<img src="images/bmw745.png" alt="audiA8" width="200px" height="200px" />
+					<h3>BMW 745</h3>
+					<p>The BMW 7 Series is a line of full-size luxury vehicles produced by the German automaker BMW.</p>
+					<p>first built in 1977</p>
+				</a>
+			</li>
+			<li>
+				<a href="#cherryHillMall">
+					<img src="images/cherryhill-mall.jpg" alt="cherryhill-mall" width="225" height="225" />
+					<h3>Go to cherry hill mall</h3>
+					<p>Go to cherry hill mall. Pick up some clothes for the wedding.</p>
+				</a>
+			</li>
+			<li>
+				<a href="#ipad3">
+					<img src="images/ipad3.jpg" alt="ipad3" width="225" height="225" />
+					<h3>Buy Ipad 3</h3>
+					<p>Purchase the Ipad 3. I have to do some game development.</p>
+				</a>
+			</li>
+			<li>
+				<a href="#macbook">
+					<img src="images/macbook-retina.jpg" alt="macbook-retina" width="225" height="225" />
+					<h3>Buy the macbook retina for chirstmas</h3>
+					<p>Save up $25 a week for a few months to purchase the mackbook pro with retina display.</p>
+				</a>
+			</li>
+			<li>
+				<a href="#shoprite">
+					<img src="images/shoprite.jpg" alt="shoprite" width="225" height="225" />
+					<h3>Go to shoprite</h3>
+					<p>I have to do a huge grocery shopping soon. The house needs a lot of stuff.</p>
+				</a>
+			</li>
+			<li>
+				<a href="#transformers">
+					<img src="images/transformers-3.jpg" alt="transformers-3" width="225" height="225" />
+					<h3>Rent Transformers 3</h3>
+					<p>I have to pick up transformers 3 dark of moon this weekend. That is one of my favorite movies of all time.</p>
+				</a>
+			</li>
+		</ul>
+	
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+
+</div><!-- end page div -->
+<!-- ===================================END BROWSE NOTES PAGE===================== --> 
+
+
+<!-- ===================================HELP PAGE SECTIONS======================== -->   
+<div data-role="page" id="help">
+	
+	<div data-role="header">
+		<h1>Help Section</h1>	
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<div data-role="collapsible" data-theme="e">
+			<h3>Creating Notes</h3>
+			<span>To create a new note, simple press create new note. <img src="images/new-note-thum.png" alt="new-note-thum" width="264" height="55" /></br> Next enter a title and a few notes, all other fields are optional. <img src="images/select-options-thumb.png" alt="select-options-thumb" width="254" height="239" />	</br> All other fields are option. When finished press save!</span>
+		</div>
+		
+		<div data-role="collapsible" data-theme="e">
+			<h3>Creating Notebooks</h3>
+				<span>To create a new notebook, simple press create new notebook. You must enter a title. Notebooks are useful to help categorize you various note. Ex: you might want your english class notes separate from your notes on fitness.</span>
+		<img src="images/new-notebook-thum.png" alt="new-notebook-thum" width="267" height="63" />
+		</div>
+		
+		<div data-role="collapsible" data-theme="e">
+			<h3>Drawing Notes</h3>
+			<span>Drawing notes is simple. Just press the draw button and begin drawing.</span>
+		</div>
+	
+		
+	</div> <!-- end content-->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end halp page fiv -->
+<!-- ===================================END HELP PAGE============================ --> 
+
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+
+<div data-role="page" id="cherryHillMall" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Cherry Hill Mall</h1>
+	</div> <!-- end header -->
+	
+	<div data-role="content" class="ui-grid-a">
+		<div class="ui-block-a"><img src="images/cherry-hill-a.jpg" alt="cherry-hill-a" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/cherry-hill-b.jpg" alt="cherry-hill-b" width="140" height="130" /></div>
+		<div class="ui-block-a"><img src="images/cherry-hill-a1.jpg" alt="cherry-hill-a1" width="140" height="130" /></div>
+		<div class="ui-block-b"><img src="images/cherry-hill-b1.jpg" alt="cherry-hill-b1" width="140" height="130" /></div>
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+
+<div data-role="page" id="ipad3" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Ipad 3</h1>
+	</div> <!-- end header -->
+	
+	<div data-role="content" class="ui-grid-a">
+		<div class="ui-block-a"><img src="images/ipada.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/ipada2.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-a"><img src="images/ipada3.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/ipada4.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-a"><img src="images/ipada5.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/ipadb.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-a"><img src="images/ipadb2.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/ipadb3.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-a"><img src="images/ipadb4.jpg" alt="ipada" width="140" height="130" /></div>	
+		<div class="ui-block-b"><img src="images/ipadb5.jpg" alt="ipada" width="140" height="130" /></div>	
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+
+<div data-role="page" id="macbook" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Macbook Pro</h1>
+		<p>The new macbook pro with retina display looks awesome. It is one my christmas list for this year. I will have to save up for it because no one is going to buy it for me.</p>
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p>.<a href="http://en.wikipedia.org/wiki/Audi_A8" >Via wikipedia</a></p>	
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+
+<div data-role="page" id="shoprite" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Shoprite</h1>
+		<p>I have to pick up a lot of stuff from shoprite on saturday. Shoprite is a local grocery store around my area.</p>
+	</div> <!-- end header -->
+	
+	<div data-role="content">
+		<p>.<a href="http://en.wikipedia.org/wiki/Toyota_Avalon">Via wikipedia</a></p>	
+	</div> <!-- end content div -->
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div> <!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+<div data-role="page" id="news" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>News</h1>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview">
+			<li>
+				<a href="#website">
+					<h3>My favorite websites</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite websites that i visit on a daily basis. Perhaps, my favorite one of them all is.</p>
+				</a>
+			</li>	
+			
+			<li>
+				<a href="#sports">
+					<h3>My favorite sports teams</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite sports teams. I live in Southern New Jersey so i like all philadelphia teams. The eagles, the phillies, the 76ers and the flyers. I can't really say which team is my favorite because i love them all.</p>
+				</a>
+			</li>
+				
+			<li>
+				<a href="#movie">
+					<h3>My favorite movie</h3>
+					<h6>By Mark J on 9/13/2012</h6>
+					<p>I have a lot of favorite movies that i have watched over my years of being on this earth. But my favorite movie of all time is Serendipity staring John Cusack and Kate Beckinsale. Set in the christmas time in New York two complete strangers meet three times in one night, John Cusack and Kate Beckinsale.</p>
+				</a>
+			</li>	
+		</ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END DRAW NOTES PAGE===================== --> 
+<!-- ===================================START NEW  PAGE========================= --> 
+<div data-role="page" id="website" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Favorite Site</h1>
+	</div>
+	
+	<div data-role="content">
+		<h3>My favorite websites</h3>
+		<h6>By Mark J on 9/13/2012</h6>
+		I have a lot of favorite websites that i visit on a daily basis. Perhaps, my favorite one of them all is <a href="http://www.espn.go.com">ESPN</a>. I am a sports fan of all kinds of sports. I like baseketball, football, baseball, soccer and sometimes hockey. I always stay up to date with golf and tenis. My next favorite site is <a href="http://www.mashable.com">mashable</a>. Where do i begin with mashable. They talk about all kinds of news there is around from political, tech, sports and business just to name a few.
+		<h6>Posted 4 hours ago</h6>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END NEW  PAGE========================= --> 
+<!-- ===================================START NEW  PAGE========================= --> 
+<div data-role="page" id="sports" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Favorite Teams</h1>
+	</div>
+	
+	<div data-role="content">
+			<h3>My favorite sports team</h3>
+			<h6>By Mark J on 9/13/2012</h6>
+			I have a lot of favorite sports teams. I live in Southern New Jersey so i like all philadelphia teams. The eagles, the phillies, the 76ers and the flyers. I can't really say which team is my favorite because i love them all. When it's football season am all in with the eagles and at the same time the phillies are making a run at he playoffs. It's really exciting. The 76ers and the flyers begin their season practically at the same time. The 76ers have become a lot better over the last two years, making the playoffs as the 8th seed in the east. This past season they made a run in the 2nd round pushing the celtics to 7 games, only losing by 8 points. This year they will be a lot better because they have rebuilt their team by acquiring the best center in the NBA in Andre Bynum. 
+			<h6>Posted 6 hours ago</h6>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END NEW  PAGE========================= --> 
+<!-- ===================================START NEW  PAGE========================= --> 
+<div data-role="page" id="movie" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Favorite Movie</h1>
+	</div>
+	
+	<div data-role="content">
+		<h3>My favorite movie</h3>
+			<h6>By Mark J on 9/13/2012</h6>
+			I have a lot of favorite movies that i have watched over my years of being on this earth. But my favorite movie of all time is Serendipity staring John Cusack and Kate Beckinsale. Set in the christmas time in New York two complete strangers meet three times in one night, John Cusack and Kate Beckinsale. After the third third time after meeting each other they decided to get to know each other by going on a little date. On that date they felt a connection with each other they never felt before. It was like falling in love on first sight. Fast forward a few months later, Cusack furiously tries to find her right before he gets married to make sure he's not making a mistake by marrying the wrong women. After being unsuccessful at finding her he gives up. Meanwhile Beckinsale tries to find him right before she gets married as well, she gives up after being unsuccessful. In the end they both end up canceling their weddings in hopes of finding each other one more time hoping to capture that magic they had when they first met. Finally in the end they met again at the very spot where they had their first date. This movie is simple heartwarming, it made me cry.
+			<h6>Posted 10 hours ago</h6>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-transition="slide">Home</a></li>
+				<li><a href="#" data-transition="slide">Settings</a></li>
+				<li><a href="index-bronze.html" data-transition="slide">Bronze App</a></li>
+				<li><a href="https://github.com/markj287/MIU/tree/gh-pages" data-transition="slide">Gh-Pages</a></li>
+			</ul>
+		</div> <!--end navbar-->
+	</div><!--end footer-->
+	
+</div><!-- end page div -->
+<!-- ===================================END NEW  PAGE========================= --> 
+
+<!-- JavaScript under here -->
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/noteBud.js"></script> <!--this is the same as main.js, i just decided to use a diff name-->
+
+
+</body>
+</html>
+
