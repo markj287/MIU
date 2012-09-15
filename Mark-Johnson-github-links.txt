@@ -1,0 +1,10 @@
+Mark Johnson Live working clickable links to gitbub Repos
+
+Link to github page
+http://markj287.github.com/MIU/Notebud-JQMobile/index.html
+
+Link to my master branch
+https://github.com/markj287/MIU/tree/master/Notebud-JQMobile
+
+Link to gh-pages
+https://github.com/markj287/MIU/tree/gh-pages/Notebud-JQMobile
