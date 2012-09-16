@@ -4,6 +4,19 @@
 	padding: 0;
 }  /* universal reset */
 
+body {
+	font-family: 'Galindo', cursive !important;
+}
+
+.ui-bar-a {
+	box-shadow: 0px 0px 7px black; 
+	font-family: 'Galindo', cursive !important;
+}
+
+.ui-btn {
+	font-family: 'Galindo', cursive !important;
+}
+
 label.errors {
 	display: block;
 	margin: 12px 0;
