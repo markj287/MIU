@@ -29,7 +29,8 @@ label.errors {
 }
 
 .fImage {
-	margin: 0 8px;	
+	margin: 40px auto;
+	display: block;
 }
 
 .appLogo {
