@@ -26,6 +26,10 @@ body {
 	height: 42px;
 }
 
+.ui-field-contain {
+	height: 120px;
+}
+
 .ui-btn {
 	font-family: 'Galindo', cursive !important;
 }
