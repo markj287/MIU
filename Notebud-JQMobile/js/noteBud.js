@@ -22,3 +22,9 @@ $(document).on('pageinit',function() {
 var saveNotes = function(data) {
 	console.log(data);
 };
+
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
