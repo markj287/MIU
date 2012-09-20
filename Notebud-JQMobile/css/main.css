@@ -8,9 +8,19 @@ body {
 	font-family: 'Galindo', cursive !important;
 }
 
+.ui-page {
+	background:  #444 url(../images/notebud-paper-bg.jpg) !important;
+}
+
+.headerImg {
+	display: block;
+	margin: 0 auto;
+}
+
 .ui-bar-a {
 	box-shadow: 0px 0px 7px black; 
 	font-family: 'Galindo', cursive !important;
+	height: 45px;
 }
 
 .ui-btn {
