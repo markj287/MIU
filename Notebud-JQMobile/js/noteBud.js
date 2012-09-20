@@ -1,8 +1,8 @@
-var saveNotes = function(data) {
-	alert(data);
-};
+// Notebud Web App
+// Author: Mark Johnson
+// Description: This app in a work in progress and some features are not yet fully implemented 
 
-$(document).on(function() { 
+$(document).on('pageinit',function() { 
 
 	var newNoteForm = $('#newNote');
 	
@@ -18,3 +18,7 @@ $(document).on(function() {
 		}
 	});
 });
+
+var saveNotes = function(data) {
+	console.log(data);
+};
