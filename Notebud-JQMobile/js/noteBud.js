@@ -12,7 +12,7 @@ $(document).on('pageinit',function() {
 		},
 		
 		submitHandler: function() {
-			// Used serializeArray() because we are usiing the form data internally otherwise we would use serialize()
+			// Used serializeArray() because we are using the form data internally otherwise we would use serialize()
 			var data = newNoteForm.serializeArray();
 			saveNotes(data);
 		}
