@@ -14,13 +14,16 @@ body {
 
 .headerImg {
 	display: block;
-	margin: 0 auto;
+	margin: 0 3px;
+	float: right;
+	padding-top: 7px;
 }
+
 
 .ui-bar-a {
 	box-shadow: 0px 0px 7px black; 
 	font-family: 'Galindo', cursive !important;
-	height: 45px;
+	height: 42px;
 }
 
 .ui-btn {
