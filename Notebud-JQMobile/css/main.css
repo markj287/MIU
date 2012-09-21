@@ -5,7 +5,7 @@
 }  /* universal reset */
 
 body {
-	font-family: 'Galindo', cursive !important;
+	
 }
 
 .ui-page {
@@ -19,19 +19,22 @@ body {
 	padding-top: 7px;
 }
 
+.home-page {
+	margin-top: 40px;
+}
 
 .ui-bar-a {
 	box-shadow: 0px 0px 7px black; 
-	font-family: 'Galindo', cursive !important;
 	height: 42px;
 }
 
 .ui-field-contain {
-	height: 120px;
+	height: 100px;
 }
 
 .ui-btn {
-	font-family: 'Galindo', cursive !important;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 label.errors {
@@ -42,7 +45,7 @@ label.errors {
 
 .cancelBtn {
 	display: block;
-	margin: 20px 10px;
+	margin: 30px 10px;
 }
 
 .fImage {
@@ -61,12 +64,6 @@ label.errors {
 	font-size: 42px;
 	font-weight: bold;
 	margin: 5px;
-}
-
-ul li {
-	margin-left: 25px;
-	color: black;
-	list-style-type: none;
 }
 
 .featured {
@@ -197,11 +194,6 @@ label {
 h2 {
 	margin-left: 10px;
 	color: #2B5599;
-}
-
-li {
-	list-style: none;
-	padding: 10px 0 0 0;
 }
 
 p {
