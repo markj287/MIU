@@ -1,5 +1,6 @@
 //Mark Johnson
-//VFW Project 3
+//MIU Project 4
+
 
 // Wait until the DOM is ready 
 window.addEventListener("DOMContentLoaded", function (){
@@ -92,12 +93,12 @@ window.addEventListener("DOMContentLoaded", function (){
         getSelectedRadioBtn(); // calls function
         getcheckedBoxBtn();
         var item                 = {};
-            item.group             = ["Group", on('groups').value ];
-            item.notetitle         = ["Title", on('notetitle').value ];
+            item.group           = ["Group", on('groups').value ];
+            item.notetitle       = ["Title", on('notetitle').value ];
             item.noteinfo        = ["Note", on('noteinfo').value ];
             item.date            = ["Date", on('date').value ];
-            item.items            = ["Number of Itmes", on('items').value ];
-            item.attach            = ["Attach a File", on('attach').value ];
+            item.items           = ["Number of Itmes", on('items').value ];
+            item.attach          = ["Attach a File", on('attach').value ];
             item.favorite        = ["Favorite Note", favoriteValue ];
 
             // save data into local storage. Use stringify to convert our object to a string 
@@ -211,6 +212,7 @@ window.addEventListener("DOMContentLoaded", function (){
         on('submit').value = "Edit Note";
         var editSubmit = on('submit');
         editSubmit.addEventListener("click", validate);
+        window.location.reload();
         editSubmit.key = this.key;
 
     } // end edit Links function 
@@ -263,14 +265,14 @@ window.addEventListener("DOMContentLoaded", function (){
             // check note title for errors 
             if(getNotetitle.value === ""){
                 var noteTitleError = "Please write a title!";
-                getNotetitle.style.border = "2px solid red";
+                getNotetitle.style.border = "4px solid red";
                 errorsArray.push(noteTitleError);
             }
 
             // check note info for errors 
             if(getNoteinfo.value === ""){
                 var noteInfoError = "Please write some notes!";
-                getNoteinfo.style.border = "2px solid red";
+                getNoteinfo.style.border = "4px solid red";
                 errorsArray.push(noteInfoError);
             }
 

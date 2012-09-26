@@ -4,9 +4,9 @@
 
 var json = {
 	"note1": {
-		"groups": ["Groups:", "Grocery"],
+		"groups": ["Groups:", "Sports"],
 		"notetitle": ["Title:","Grocery Shopping"],
-		"noteinfo": ["Note:","I have to pick up a few items at shoprite on thursday."],
+		"noteinfo": ["Note:","This is a test. I have to pick up a few items at shoprite on thursday."],
 		"date": ["Date:","June 16, 2012"],
 		"items": ["Number of Items:","4"],
 		"attach": ["Attach a File:",""],
@@ -186,4 +186,4 @@ var json = {
 		"attach": ["Attach a File:",""],
 		"favorite": ["Favorite Note:","Yes"]
 	}
-}
+};
