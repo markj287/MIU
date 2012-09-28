@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function (){
 
 
 
-
+/*
     function getSelectedRadioBtn() {
         var radio = document.forms[0].favNote; 
         for (var i=0; i<radio.length; i++) {
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function (){
             } // end if
         } // end for loop
     } // end get selected radio btn function
-
+*/
 
 
 
@@ -89,16 +89,16 @@ window.addEventListener("DOMContentLoaded", function (){
         }
         // gather up all form fields values and store them in an object 
         // object properites will contain an array with form labels and input values 
-        getSelectedRadioBtn(); // calls function
+       // getSelectedRadioBtn(); // calls function
         getcheckedBoxBtn();
-        var item                 = {};
-            item.group             = ["Group", on('groups').value ];
-            item.notetitle         = ["Title", on('notetitle').value ];
-            item.noteinfo        = ["Note", on('noteinfo').value ];
-            item.date            = ["Date", on('date').value ];
-            item.items            = ["Number of Itmes", on('items').value ];
-            item.attach            = ["Attach a File", on('attach').value ];
-            item.favorite        = ["Favorite Note", favoriteValue ];
+        var item                	= {};
+            item.group        	= ["Group", on('groups').value ];
+            item.notetitle    	= ["Title", on('notetitle').value ];
+            item.noteinfo     	= ["Note", on('noteinfo').value ];
+            item.date           	= ["Date", on('date').value ];
+            item.items         	= ["Number of Itmes", on('items').value ];
+            item.attach            	= ["Attach a File", on('attach').value ];
+            item.favorite        	= ["Favorite Note", favoriteValue ];
 
             // save data into local storage. Use stringify to convert our object to a string 
             localStorage.setItem(id, JSON.stringify(item));            
@@ -114,22 +114,25 @@ window.addEventListener("DOMContentLoaded", function (){
             autoFillData();
         };
 
-        var makeDiv = document.createElement('div');
-        makeDiv.setAttribute("id", "items");
-        var createList = document.createElement('ul');
-        makeDiv.appendChild(createList); // puts createList into ul element created above 
-        document.body.appendChild(makeDiv); // attach makeDiv to the document 
+       // var makeDiv = document.createElement('div');
+        //makeDiv.setAttribute("id", "items");
+        //var createList = document.createElement('ul');
+        //makeDiv.appendChild(createList); // puts createList into ul element created above 
+      //  document.body.appendChild(display); // attach makeDiv to the document 
+        document.createElement(display);
         on('items').style.display = "block";
+        
         for(i=0, entries=localStorage.length; i<entries; i++) {
-            var createLi = document.createElement('li');
-            var linksList = document.createElement('li');
-            createList.appendChild(createLi);
+            //var createLi = document.createElement('li');
+            //var linksList = document.createElement('li');
+            //createList.appendChild(createLi);
             var key = localStorage.key(i);
             var value = localStorage.getItem(key);
             var savedNote = JSON.parse(value); // parse the save note object back into an object 
             var createSubList = document.createElement('ul');
             createLi.appendChild(createSubList);
             getImage(savedNote.groups[1],createSubList);
+            
             for(var a in savedNote) {
                 var creatSubListItem = document.createElement('li');
                 createSubList.appendChild(creatSubListItem);
@@ -196,14 +199,14 @@ window.addEventListener("DOMContentLoaded", function (){
         toggleControls("off"); // shows our form
 
         // Fill in our from field with the current values 
-        on('groups').value = item.group[1];
-        on('notetitle').value = item.notetitle[1];
-        on('noteinfo').value = item.noteinfo[1];
-        on('date').value = item.date[1];
-        on('items').value = item.items[1];
-        on('attach').value = item.attach[1];
+        on('groups').value = item.group[0];
+        on('notetitle').value = item.notetitle[0];
+        on('noteinfo').value = item.noteinfo[0];
+        on('date').value = item.date[0];
+        on('items').value = item.items[0];
+        on('attach').value = item.attach[0];
 
-        if(item.favorite[1] == "Yes"){
+        if(item.favorite[0] == "Yes"){
             on('fav').setAttribute("checked", "checked");
         }
 
